@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
+    "jsx": "react-jsx",
     "types": [
       "vitest/globals",
-      "@testing-library/jest-dom"
+      "@testing-library/jest-dom",
+      "modern-normalize"
     ]
   },
   "files": [],
