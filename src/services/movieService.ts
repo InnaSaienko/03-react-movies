@@ -9,11 +9,12 @@ const api = axios.create({
     }
 });
 
-export const getMovies = async (query: string): Promise<any[]> => {
+export const getMovies = async (query: string, { signal }: { signal?: AbortSignal } = {}): Promise<any[]> => {
     const response = await api.get('/search/movie', {
         params: {
             query: query
-        }
+        },
+        signal
     });
     return response.data.results || [];
 };
