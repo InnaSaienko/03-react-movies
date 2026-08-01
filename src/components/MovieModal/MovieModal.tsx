@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './MovieModal.module.css';
+import type {Movie} from "../../types/movie.ts";
 
 const imageModalBaseUrl = 'https://image.tmdb.org/t/p/original';
 
 export interface MovieModalProps {
-    movie: any;
+    movie: Movie;
     onClose: () => void;
 }
 
