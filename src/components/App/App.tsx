@@ -52,7 +52,7 @@ function App() {
 
     return (
         <div className={styles.app}>
-            <SearchBar onSearch={handleSearch}/>
+            <SearchBar onSubmit={handleSearch}/>
             {isLoading && <Loader />}
             {isError && <ErrorMessage />}
             {!isLoading && !isError && data.length > 0 && <MovieGrid movies={data} onMovieClick={handleMovieClick} />}
