@@ -3,17 +3,17 @@ import styles from './SearchBar.module.css';
 import toast from 'react-hot-toast';
 
 export interface SearchBarProps {
-    onSearch: (query: string) => void;
+    onSubmit: (query: string) => void;
 }
 
-export const SearchBar: React.FC<SearchBarProps> = ({onSearch}) => {
+export const SearchBar: React.FC<SearchBarProps> = ({onSubmit}) => {
     function search (formData: FormData) {
         const query = formData.get('query') as string;
         if (!query.trim()) {
             toast.error('Please enter your search query.');
             return;
         }
-        onSearch(query);
+        onSubmit(query);
     }
 
     return (
