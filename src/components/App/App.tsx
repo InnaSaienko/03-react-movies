@@ -55,7 +55,7 @@ function App() {
             <SearchBar onSubmit={handleSearch}/>
             {isLoading && <Loader />}
             {isError && <ErrorMessage />}
-            {!isLoading && !isError && data.length > 0 && <MovieGrid movies={data} onMovieClick={handleMovieClick} />}
+            {!isLoading && !isError && data.length > 0 && <MovieGrid movies={data} onSelect={handleMovieClick} />}
             {selectedMovie && (
                 <MovieModal movie={selectedMovie} onClose={handleCloseModal}/>
             )}
